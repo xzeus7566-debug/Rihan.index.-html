@@ -1,0 +1,113 @@
+<script>
+const loveQuotes = [
+  "You are my today, my tomorrow, and every heartbeat in between. ❤️",
+  "I don’t need the world, I just need you by my side. 💕",
+  "Every time I see you, I fall in love all over again. 😍",
+  "My heart chose you, and it will choose you every lifetime. 💖",
+  "You are the reason my smile feels real. 🌸",
+  "Loving you is my favorite thing to do forever. 💞"
+];
+
+function showLoveQuote() {
+  const box = document.getElementById("loveQuoteBox");
+  const text = document.getElementById("loveQuoteText");
+
+  const randomIndex = Math.floor(Math.random() * loveQuotes.length);
+  text.innerText = loveQuotes[randomIndex];
+
+  box.style.display = "block";
+}
+</script><button onclick="showLoveQuote()">Special Love Quote 💝</button>
+
+<div id="loveQuoteBox">
+  <p id="loveQuoteText"></p>
+</div>#loveQuoteBox {
+  display: none;
+  margin-top: 15px;
+  padding: 18px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #fff0f5, #ffe6f0);
+  animation: fadeUp 0.8s ease;
+}
+
+#loveQuoteText {
+  font-size: 17px;
+  color: #ff2f92;
+  font-style: italic;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Quotes for You</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        #quoteBox {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        #quote {
+            font-size: 24px;
+            margin-bottom: 20px;
+            transition: all 0.5s ease;
+        }
+        button {
+            background: #fff;
+            color: #ff4b6e;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #ff4b6e;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="quoteBox">
+        <div id="quote">Click the button to see a special love quote 💖</div>
+        <button onclick="newQuote()">Next Quote</button>
+    </div>
+
+    <script>
+        const quotes = [
+            "I love you not because of who you are, but because of who I am when I’m with you.",
+            "Every love story is beautiful, but ours is my favorite.",
+            "You are my today and all of my tomorrows.",
+            "I fall in love with you more and more every day.",
+            "You are my sunshine, my only sunshine.",
+            "In your smile, I see something more beautiful than stars.",
+            "You are the reason I believe in love.",
+            "Being with you feels like home.",
+            "My heart is perfect because you are inside.",
+            "I didn’t choose you, my heart did."
+        ];
+
+        function newQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById('quote').innerText = quotes[randomIndex];
+        }
+    </script>
+</body>
+</html>
